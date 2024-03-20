@@ -1,7 +1,7 @@
 const AddToDo = () => {
   return (
     <>
-      <div className="row">
+      <div className="row kg-row">
         <div className="col-6">
           <input
             className="form-control"
@@ -14,7 +14,7 @@ const AddToDo = () => {
           <input className="form-control" type="date" name="date" id="" />
         </div>
         <div className="col-2">
-          <button className="btn btn-success">ADD</button>
+          <button className="btn btn-success kg-button">ADD</button>
         </div>
       </div>
     </>

@@ -1,5 +1,23 @@
-.h1 {
+h1 {
   font-weight: 900;
   font-size: 40px;
-  margin: 20px;
+  margin: 10px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+input {
+  width: 100%;
+}
+
+.kg-button {
+  min-width: 80px;
+}
+
+.items-container {
+  text-align: left;
+}
+
+.kg-row {
+  margin: 7px 2px;
 }
