@@ -1,9 +1,9 @@
 import styles from "./Button.module.css";
 
-const Button = () => {
+const Button = ({ name }) => {
   return (
     <>
-      <button className={styles.button}>C</button>
+      <button className={styles.button}>{name}</button>
     </>
   );
 };
