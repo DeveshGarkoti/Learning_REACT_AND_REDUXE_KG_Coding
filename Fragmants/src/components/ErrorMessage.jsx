@@ -1,5 +1,5 @@
 const ErrorMessage = ({ items }) => {
-  return <>{items.length === 0 && <h3>I am here</h3>}</>;
+  return <>{items.length === 0 && <h5>Please enter Healthy Food Items</h5>}</>;
 };
 
 export default ErrorMessage;

@@ -1,11 +1,11 @@
-const FoodInput = () => {
+const FoodInput = ({ handleKeyDown }) => {
   return (
     <>
       <input
         type="text"
         className="form-control mb-5 mt-2"
         placeholder="Enter food items here"
-        onChange={(event) => console.log(event.target.value)}
+        onKeyDown={handleKeyDown}
       />
     </>
   );

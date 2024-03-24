@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Container from "./components/Container";
 import ErrorMessage from "./components/ErrorMessage";
@@ -5,25 +6,32 @@ import FoodInput from "./components/FoodInput";
 import FoodItems from "./components/FoodItems";
 
 function App() {
-  let foodItems = ["egg", "Green vagetable", "Roti", "Sabji", "panner"];
+  let [foodItems, setFoodItems] = useState([
+    "egg",
+    "Green vagetable",
+    "Roti",
+    "Sabji",
+  ]); // create a state variable
+
+  const onKeyDown = (event) => {
+    if (event.key === "Enter") {
+      let newfoodItem = event.target.value;
+      let newItems = [...foodItems, newfoodItem];
+      event.target.value = "";
+      setFoodItems(newItems);
+    }
+  };
+
+  
 
   return (
     <>
       <Container>
         <h1>Healthy Foods</h1>
+        <FoodInput handleKeyDown={onKeyDown} />
         <ErrorMessage items={foodItems} />
-        <FoodInput />
         <FoodItems items={foodItems} />
       </Container>
-
-      {/* <Container>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
-          consequatur cumque eius optio. Maiores tempore saepe aperiam sunt nemo
-          vero qui placeat ipsum totam assumenda magni, enim consequatur
-          mollitia ad.
-        </p>
-      </Container> */}
     </>
   );
 }

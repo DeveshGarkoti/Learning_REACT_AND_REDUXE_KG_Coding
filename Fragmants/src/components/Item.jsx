@@ -1,10 +1,13 @@
-const Item = ({ foodItem, handleBuyButton }) => {
+const Item = ({ foodItem, active, handleBuyButton }) => {
   return (
     <>
-      <li className="list-group-item" aria-current="true">
+      <li
+        className={`${active && "active"}  list-group-item`}
+        aria-current="true"
+      >
         {foodItem}
-        <button className="btn btn-outline-info" onClick={handleBuyButton}>
-          Buy
+        <button className="btn btn-info " onClick={handleBuyButton}>
+          {active ? "Remove" : "Buy"}
         </button>
       </li>
     </>
